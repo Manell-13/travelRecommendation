@@ -1,0 +1,126 @@
+body{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+.containerNavbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: grey;
+    color: rgb(228, 228, 228);
+}
+
+/* links */ 
+
+.linksNavbar a{
+    margin: 1rem;
+    text-decoration: none;
+    color: rgb(228, 228, 228);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.linksNavbar a:hover{
+    text-decoration: underline;
+}
+
+
+/* Search bar */
+.inputsNavbar{
+    margin: 1rem;
+}
+
+.inputTextNavbar{
+    width: 16rem;
+    height: 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 1rem;
+    text-align: center;
+    margin-right: 0.3rem;
+}
+
+.btnNavbar{
+    margin: 0.3rem;
+    width: 5rem;
+    height: 2rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+}
+
+.btnNavbar:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+/* MAIN CONTAINER */
+
+.mainContainer {
+    position: relative; /* Necesario para el overlay */
+    background-image: url(/resources/img/sydney.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    /*background-attachment: fixed;*/
+}
+
+/* Agregar un overlay oscuro */
+.mainContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Ajusta la opacidad aquí (0.6 es un tono oscuro) */
+    z-index: 1;
+}
+
+/* Asegurar que el contenido esté por encima del overlay */
+.mainContainer * {
+    position: relative;
+    z-index: 2;
+}
+
+.homeTitle h2{
+    font-size: 8rem;
+}
+
+.homeText{
+    margin: 0 auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.homeText p{
+    font-size: 2rem;
+}
+
+.btnBookNow{
+    width: 8rem;
+    height: 4rem;
+    border: none;
+    border-radius: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.btnBookNow:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
