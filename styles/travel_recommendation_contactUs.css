@@ -1,0 +1,119 @@
+body{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+.containerNavbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: grey;
+    color: rgb(228, 228, 228);
+}
+
+/* links */ 
+
+.linksNavbar a{
+    margin: 1rem;
+    text-decoration: none;
+    color: rgb(228, 228, 228);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.linksNavbar a:hover{
+    text-decoration: underline;
+}
+
+
+
+/* MAIN CONTAINER */
+
+.mainContainer {
+    justify-content: space-around !important;
+}
+
+/* Agregar un overlay oscuro */
+.mainContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Ajusta la opacidad aquí (0.6 es un tono oscuro) */
+    z-index: 1;
+}
+
+/* Asegurar que el contenido esté por encima del overlay */
+.mainContainer * {
+    position: relative;
+    z-index: 2;
+}
+
+.contactUsTitle h2{
+    font-size: 5rem;
+}
+
+.contactUsText{
+    margin: 0 auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contactUsText p{
+    font-size: 2rem;
+}
+
+.containerForm{
+    background: rgba(0, 0, 0, 0.4); /* Ajusta la opacidad aquí (0.6 es un tono oscuro) */
+    padding: 1rem;
+    width: 30rem;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    border-radius: 2rem;
+}
+
+.datoFormulario{
+    margin: 2rem;
+    display: flex;
+    flex-direction:column;
+}
+
+.datoFormulario label {
+    font-size: 2rem;
+}
+
+.datoFormulario input{
+    width: 10rem;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    border-radius: 1rem;
+    height: 2rem;
+}
+
+.btnSubmit{
+    text-align: center;
+    font-size: 1rem;
+    border: none;
+    border-radius: 1rem;
+    width: 5rem;
+    height: 3rem;
+    background-color: rgb(88, 88, 217);
+    color: #fff;
+}
+
+.btnSubmit:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
